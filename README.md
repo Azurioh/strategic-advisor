@@ -1,5 +1,8 @@
 # strategic-advisor
 
+[![CI](https://github.com/Azurioh/strategic-advisor/actions/workflows/ci.yml/badge.svg)](https://github.com/Azurioh/strategic-advisor/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+
 A small collection of Claude skills. Each skill is a self-contained folder under `skills/<skill-name>/` with a single `SKILL.md`.
 
 ## Skills
@@ -10,7 +13,14 @@ A small collection of Claude skills. Each skill is a self-contained folder under
 
 ## Install
 
-### Claude Code
+### Claude Code (plugin marketplace)
+
+```
+/plugin marketplace add Azurioh/claude-plugins
+/plugin install strategic-advisor@azurioh-plugins
+```
+
+### Claude Code (manual)
 
 Copy the skill folder into your personal skills directory:
 
@@ -33,3 +43,11 @@ Zip the skill folder (the folder itself must be the zip root entry) and upload i
 ```sh
 cd skills && zip -r ../strategic-advisor.zip strategic-advisor
 ```
+
+## Contributing
+
+Issues and pull requests are welcome. Read [CONTRIBUTING.md](CONTRIBUTING.md) and the [Code of Conduct](CODE_OF_CONDUCT.md) first. Report security problems as described in [SECURITY.md](SECURITY.md).
+
+## License
+
+[MIT](LICENSE)

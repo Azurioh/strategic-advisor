@@ -1,0 +1,29 @@
+name: Bug report
+description: The skill triggers wrongly, does not trigger, or behaves against its instructions.
+labels: [bug]
+body:
+  - type: dropdown
+    id: surface
+    attributes:
+      label: Where do you use the skill?
+      options: [Claude Code, claude.ai, Other]
+    validations:
+      required: true
+  - type: textarea
+    id: prompt
+    attributes:
+      label: Prompt you sent
+      description: The exact message that triggered (or failed to trigger) the skill.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected vs actual behavior
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Skill / plugin version
+      placeholder: "0.1.0"

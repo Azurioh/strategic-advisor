@@ -1,0 +1,26 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Lint shell scripts
+        run: shellcheck scripts/*.sh
+      - name: Validate skills and plugin manifest
+        run: bash scripts/validate.sh
+      - name: Check the skill zips cleanly for claude.ai
+        run: |
+          cd skills
+          for dir in */; do
+            zip -rq "/tmp/${dir%/}.zip" "$dir"
+            unzip -l "/tmp/${dir%/}.zip" | grep -q "${dir}SKILL.md"
+          done
