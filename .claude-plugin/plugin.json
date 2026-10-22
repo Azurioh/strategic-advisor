@@ -1,0 +1,10 @@
+{
+  "name": "strategic-advisor",
+  "displayName": "Strategic Advisor",
+  "description": "Cold, candid strategic partner and rational auditor: challenges premises, detects avoidance, weighs opportunity cost, runs a pre-mortem, then gives a ranked execution plan.",
+  "version": "0.1.0",
+  "author": { "name": "Azurioh" },
+  "repository": "https://github.com/Azurioh/strategic-advisor",
+  "license": "MIT",
+  "keywords": ["advisor", "decision-making", "audit", "critical-thinking", "skill"]
+}
